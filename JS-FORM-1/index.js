@@ -27,14 +27,39 @@
 //     }
 // }
 
+
 // Exercice 10.3 - Surbrillance au click
 
-var couleurFond = document.getElementById('premier');
-couleurFond.style.backgroundColor = 'yellow';
-document.getElementById("mon-bouton2"). onclick = function couleurFond2(){
-    var couleurFond = document.getElementById("second");
-    couleurFond.style.backgroundColor ="yellow";
-}
+// var couleurFond = document.getElementById('premier');
+// couleurFond.style.backgroundColor = 'yellow';
+// var couleurFond2 = document.getElementById('second')
+// document.getElementById("second").onclick = function(){
+//    couleurFond2.style.backgroundColor = "yellow";
+// }
+
+
+// document.getElementById("mon-bouton2"). onclick = function(){
+//     var couleurFond2 = document.getElementById("second");
+//     couleurFond2.style.backgroundColor = "yellow";
+//     }
+
+// var yellowClick = document.getElementsByTagName("p")
+// for (var i = 0; i < yellowClick.length; i++){
+//     yellowClick[i].onclick = function(event){
+//         event.target.style.backgroundColor ="yellow";   
+//     }   
+// }
+
+// function colorierParagraphes() {
+//     let paragraphs = document.getElementsByTagName("p")
+//     for (let i = 0; i < paragraphs.length; i++){
+//         paragraphs[i].style.backgroundColor ="yellow";
+//     }
+// }
+// colorierParagraphes();
+
+
+// Exercice 10.4 - Filtrage par catégorie
 
 
 
