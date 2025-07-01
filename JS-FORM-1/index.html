@@ -7,6 +7,59 @@
     <title>Document</title>
 </head>
 <body>
+<main>
+      <h1 id="titre">Bonjour les CDA</h1>
+         <!-- Pop-up -->
+      <div id ="popup" class ="popup-overlay">
+        <div class = "popup-content">
+            <span class = "close-btn" id ="closeBtn">&times;</span> <!-- &times est un unicode qui fait la croix du popUp-->
+            <h2 class = "popUpText"> Bienvenue !</h2>
+            <p class = "popUpText">Ceci est une pop-up qui s'affiche automatiquement.</p>
+        </div>
+    </div>
+
+     <!-- Nouvelle section avec fade-in -->
+        <section id="fadein-section" class="fade-in">
+            <h2 class="fadeinColor">Section animée en fade-in</h2>
+            <p class="fadeinColor">Ce contenu apparaît en fondu grâce à une animation CSS.</p>
+        </section>
+    
+    <!-- Nouvelle section avec zoom-rotate-in-->
+         <section class="zoom-rotade-in">
+            <h2 class ="fadeinColor">Effet zoom et rotation</h2>
+            <p class ="fadeinColor">Ce contenu apparaît avec un effet zoom</p>
+
+         </section>
+
+    <!-- Nouvelle animation CARTOON section (avec effet rebond bounce)-->
+         <section>
+            <button class="bounce">Cliquez moi</button>
+         </section>
+
+     <!-- Nouvelle animation SHAKE section (avec effet shake)-->
+         <section>
+            <button class="shake">Shake moi</button>
+         </section>
+
+    <section>
+            <div class="section">
+                <img class="imagSectionTest" src="images/Girafe.jpg" alt="Image de Girage">
+                <p class="petit-texte">Voici une girafe apperçu lors d'un safari au Kenya</p>
+                
+                <!-- Checkbox caché -->
+                <input type="checkbox" id="toggle-desc" class="toggle-desc">
+                <label for="toggle-desc" class="arrow-container">
+                    <span class="arrow-down">↓ voir plus</span>
+                </label>
+                
+                <div class="description-box">
+                    <p class="textBoxBlack">La Girafe Masaï est endémique de la Tanzanie et du Kenya. Elle est largement répandue dans le centre et le nord de la Tanzanie, ainsi que dans le sud du Kenya. Elle est également présente dans le parc national de l'Akagera, au Rwanda.</p>
+                </div>
+            </div>
+        </section>
+
+       
+
     <!-- <section>
         <form>
             <label for="nom">Nom</label>
@@ -39,8 +92,9 @@
  <!-- <section>
  </section> -->
  <section>
-    
+  
  </section>
+ </main>
 </body>
 <script src="index.js"></script>
 </html>

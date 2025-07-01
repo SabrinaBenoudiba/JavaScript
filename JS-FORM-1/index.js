@@ -1,4 +1,13 @@
+    // Affiche la pop-up automatiquement 
+window.onload = function() {
+  document.getElementById('popup').classList.add('active');  // La classe active est celle qu'on a créé dans le fichier css
+};
 
+// Ferme la pop-up au clic sur la croix
+document.getElementById('closeBtn').onclick = function() {
+  document.getElementById('popup').classList.remove('active');
+};
+ 
 // Exercice 9.a
 // let nom2 = document.getElementById('nom').value; // Permet de récupérer la valeur qui est dans le fichier html
 // let prenom2 = document.getElementById('prenom').value;

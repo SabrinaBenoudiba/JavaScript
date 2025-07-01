@@ -1,3 +1,203 @@
+/*--------------POP UP----------------*/
+/* Fond semi-transparent couvrant tout l'écran */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popUpText{
+  color: black;
+}
+
+/* Affichage de la pop-up */
+.popup-overlay.active {
+  display: flex;
+}
+
+/* Contenu de la pop-up avec animation */
+.popup-content {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  position: relative;
+  min-width: 300px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2); /*Ombre de la boîte*/
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.4s, transform 0.4s; /*Pour ne pas que ça s'ouvre brutalement*/
+}
+
+/* Animation d'apparition */
+.popup-overlay.active .popup-content {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Bouton de fermeture */
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 28px; /*Taille de l'unicode*/
+  cursor: pointer; /*pour que ce soit un pointer*/
+  color: #888;
+}
+.close-btn:hover {
+  color: #e74c3c; /*Couleur du hover de l'unicode*/
+}
+
+
+
+.imagSectionTest {
+    width : 150px;
+}
+
+.section{
+    width: 600px ;
+    padding: 20px;
+    background: #F9F9F9;
+    border-radius: 8px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.section img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.petit-texte {
+    font-size: 14px;
+}
+
+.toggle-desc{ /*Pour faire disparaitre la checkBox*/
+    display: none; 
+}
+
+.arrow-container{
+    margin: 10px 0; /*on cible les 4 côtés haut droit bas gauche donc là gérer haut et bas et l'autre */
+    cursor: pointer;
+    display: inline-block;
+}
+
+.arrow-down { /*la classe de la petite flêche et le texte*/
+    font-size: 24px;
+    display: inline-block;
+    transition: transform 0.3s;
+
+}
+
+.description-box {
+    max-height: 0;
+    overflow: hidden; /*pour ne pas que le texte dépasse de la boîte quand il est fermé*/
+    transition: max-height 0.3s ease-out ; /*ease-out fonction d'accélération pour faire une transition en css effet de ralentissement - on va dire que le changement de la max height va durer 0.3 seconde et ça va ouvrir progressivement la boîte (vite au début et de plus en plus lent à la fin*/
+    background: #F9F9F9;
+    border-radius: 8px;
+    padding : 0 15px;
+    margin : 18px 0;
+}
+
+.textBoxBlack{
+    color : #111
+}
+
+.toggle-desc:checked ~ .description-box { /* le ~ est un selecteur de frère quand on cliquera ça ira sur le frére qui est description-box */
+    max-height: 500px;
+    padding : 15px; /*marge interne*/   
+}
+
+.toggle-desc:checked ~ .arrow-container .arrow-down {
+    transform:scale(1.5);
+}
+
+ /*--------------Anim JS---------------*/
+  /*---------------fade-in effect-----------------*/
+/* Animation fade-in */
+.fade-in {
+  width: 500px;
+  margin-top: 10em;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(100px);
+  animation: fadeInMove 3s ease-out forwards;
+}
+.fadeinColor {
+  color: black;
+}
+
+@keyframes fadeInMove {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.zoom-rotade-in {
+    opacity: 0;
+    transform:scale(0.5) rotate(-30deg);
+    animation: zoomRotateIn 2s cubic-bezier(.68, -0.55, .27, 1.55) forwards;
+}
+
+/*Animation Rotation*/
+
+@keyframes zoomRotateIn {
+    to{
+        opacity: 1;
+        transform: scale(2) rotate (0deg);
+    }
+}
+
+
+/*Animation Bounce - CARTOON*/
+
+.bounce {
+    display: inline-block;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-90px);
+    }
+    40% {
+        transform: translateY(-60px);
+    }
+    60% {
+        transform: translateY(-30px);
+    }
+    80% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/*Animation SHAKE*/
+
+.shake {
+    display: inline-block; /*l'élément se place à côté des autres comme si c'était un élément inline et il accepte les marges hauteurs padding car il est block*/
+    animation: shake 0.6s cubic-bezier(.36, .07, .19, .97) both;
+}
+
+@keyframes shake {
+    10%, 90% { transform: translateX(-5px);}
+    20%, 80% { transform: translateX(10px);}
+    30%, 50%, 70% { transform: translateX(-20px);}
+    40%, 60% { transform: translateX(20px);}
+}
+
+/*-------------fin fade-in effect-----------------*/
+
+
+/*-------------------------------Exercices--------------------------------------*/
+
 .hidden{
     display : none;
 }
