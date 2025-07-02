@@ -33,6 +33,85 @@
   transition: opacity 0.4s, transform 0.4s; /*Pour ne pas que ça s'ouvre brutalement*/
 }
 
+  /*-------------MENU BURGER-------------*/
+  .menuBurger{
+   /* display: none; */
+  }
+
+  .navLien ul{
+
+  }
+  nav{
+    height: 50px;
+}
+
+.menuBurger::before,
+.menuBurger::after{
+    content: '';
+    width: 100%;
+    height: 50%;
+    background-color: #EAFBFF;
+}
+
+.menuBurger::after{
+    background-color: #208FF9;
+}
+  
+.menuBurger nav{
+    top: 0;
+    z-index: 1;
+    width: 100%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation{
+   
+    border-radius: 8px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    padding: 5px;
+    line-height: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menuBurger ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 0;
+    overflow: hidden;
+    transition: .4s cubic-bezier(.77,0,.18,1);
+}
+
+.menuBurger.active ul{
+    width: 420px;
+    margin-right: 20px;
+}
+
+
+
+
+
+
+/*****************Effet Parallax*************************/
+.parallax{
+  background-image:url(images/Paysage.jpg);/*definit mon image de fond*/
+  height: 100%;/*permet de dire de remplir 100% de son conteneur*/
+  background-attachment: fixed;/*fixe l'image de fond au scroll*/
+  background-position: center;/*positionne l'image de fond au centre*/
+  background-repeat: no-repeat;/*empeche la répétition de l'image*/
+  background-size: cover;/*redimensionne l'image pour couvrir l'intégralité de l'element*/
+}
+
+main{
+  padding-top: 80px;/*ajoute un padding top a tout mon contenu 
+  donc du main pour ne pas etre en dessous de mon header fixed*/
+}
+
 /* Animation d'apparition */
 .popup-overlay.active .popup-content {
   opacity: 1;
@@ -200,4 +279,20 @@
 
 .hidden{
     display : none;
+}
+
+
+@media screen and (max-width:768px){
+    .header{
+        display: none;
+    }
+    .menuBurger{
+        display: block;
+
+    }
+    
+}
+
+#products li.hide{
+    display: none;
 }

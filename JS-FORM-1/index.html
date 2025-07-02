@@ -6,57 +6,92 @@
     <link href="style.css" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
-<main>
-      <h1 id="titre">Bonjour les CDA</h1>
+<body class ="parallax"> <!--Effet parallax-->
+    <!-- <header>
+        <div class="header">
+            <div>
+                <img src="images/Girafe.jpg" alt="Logo">
+            </div>
+            <div>
+                <nav class="navBar">
+                    <ul class="toto">
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="Link/services.html">Services</a></li>
+                        <li><a href="#">Produits</a></li>
+                        <li><a href="Link/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div> -->
+        <!-- <div class="menuBurger">-Menu burger -->
+            <!-- <div>
+                <img src="image/disney_logo.png" alt="Logo">
+            </div>
+            <nav>
+                <div class="navigation">
+                    <ul class="navLien">
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="Link/services.html">Services</a></li>
+                        <li><a href="#">Produits</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <div class="basculant"></div>
+                </div>
+            </nav>
+        </div>
+    </header> -->
+<!-- <main>
+      <h1 id="titre">Bonjour les CDA</h1> -->
          <!-- Pop-up -->
-      <div id ="popup" class ="popup-overlay">
-        <div class = "popup-content">
-            <span class = "close-btn" id ="closeBtn">&times;</span> <!-- &times est un unicode qui fait la croix du popUp-->
-            <h2 class = "popUpText"> Bienvenue !</h2>
+      <!-- <div id ="popup" class ="popup-overlay">
+        <div class = "popup-content"> -->
+            <!-- <span class = "close-btn" id ="closeBtn">&times;</span> &times est un unicode qui fait la croix du popUp -->
+            <!-- <h2 class = "popUpText"> Bienvenue !</h2>
             <p class = "popUpText">Ceci est une pop-up qui s'affiche automatiquement.</p>
         </div>
-    </div>
+    </div> -->
 
      <!-- Nouvelle section avec fade-in -->
-        <section id="fadein-section" class="fade-in">
+        <!-- <section id="fadein-section" class="fade-in">
             <h2 class="fadeinColor">Section animée en fade-in</h2>
             <p class="fadeinColor">Ce contenu apparaît en fondu grâce à une animation CSS.</p>
-        </section>
+        </section> -->
     
     <!-- Nouvelle section avec zoom-rotate-in-->
-         <section class="zoom-rotade-in">
+         <!-- <section class="zoom-rotade-in">
             <h2 class ="fadeinColor">Effet zoom et rotation</h2>
             <p class ="fadeinColor">Ce contenu apparaît avec un effet zoom</p>
 
-         </section>
+         </section> -->
 
     <!-- Nouvelle animation CARTOON section (avec effet rebond bounce)-->
-         <section>
+         <!-- <section>
             <button class="bounce">Cliquez moi</button>
-         </section>
+         </section> -->
 
      <!-- Nouvelle animation SHAKE section (avec effet shake)-->
-         <section>
+         <!-- <section>
             <button class="shake">Shake moi</button>
-         </section>
+         </section> -->
 
-    <section>
+    <!-- <section>
             <div class="section">
                 <img class="imagSectionTest" src="images/Girafe.jpg" alt="Image de Girage">
-                <p class="petit-texte">Voici une girafe apperçu lors d'un safari au Kenya</p>
+                <p class="petit-texte">Voici une girafe apperçu lors d'un safari au Kenya</p> -->
                 
                 <!-- Checkbox caché -->
-                <input type="checkbox" id="toggle-desc" class="toggle-desc">
+                <!-- <input type="checkbox" id="toggle-desc" class="toggle-desc">
                 <label for="toggle-desc" class="arrow-container">
                     <span class="arrow-down">↓ voir plus</span>
                 </label>
                 
                 <div class="description-box">
                     <p class="textBoxBlack">La Girafe Masaï est endémique de la Tanzanie et du Kenya. Elle est largement répandue dans le centre et le nord de la Tanzanie, ainsi que dans le sud du Kenya. Elle est également présente dans le parc national de l'Akagera, au Rwanda.</p>
+                    <p class="textBoxBlack">La Girafe Masaï est endémique de la Tanzanie et du Kenya. Elle est largement répandue dans le centre et le nord de la Tanzanie, ainsi que dans le sud du Kenya. Elle est également présente dans le parc national de l'Akagera, au Rwanda.</p>
+                    <p class="textBoxBlack">La Girafe Masaï est endémique de la Tanzanie et du Kenya. Elle est largement répandue dans le centre et le nord de la Tanzanie, ainsi que dans le sud du Kenya. Elle est également présente dans le parc national de l'Akagera, au Rwanda.</p>
                 </div>
             </div>
-        </section>
+        </section> -->
 
        
 
@@ -90,10 +125,46 @@
     <button id ="mon-bouton"></button>
  </section> -->
  <!-- <section>
+    <h1>Filtrage par catégorie</h1>
+    <button id="all">Toutes catégories</button>
+    <button id="women">Rayon Femme</button>
+    <button id="men">Rayon Homme</button>
+    <button id="children">Rayon Enfant</button>
+    <article class="cloth women">Robes</article>
+    <article class="cloth women">Jupes</article>
+    <article class="cloth women">Chaussures</article>
+    <article class="cloth men">Pulls</article>
+    <article class="cloth men">Pantalons</article>
+    <article class="cloth men">Chaussures</article>
+    <article class="cloth children">Robes</article>
+    <article class="cloth children">Jupes</article>
+    <article class="cloth children">Pulls</article>
+    <article class="cloth children">Pantalons</article>
  </section> -->
+
  <section>
-  
- </section>
+    <section>
+        <label for="categorie-select">Filtrer par catégorie :</label>
+        <select id="categorie-select" onchange="filtrer(this.value)">
+            <option value="all">Toutes catégories</option>
+            <option value="women">Rayon Femme</option>
+            <option value="men">Rayon Homme</option>
+            <option value="children">Rayon Enfant</option>
+        </select>
+    </section>
+    <section id="products">
+        <li class="women">Robes</li>
+        <li class="women">Jupes</li>
+        <li class="women men children">Chaussures</li>
+        <li class="men children">Pulls</li>
+        <li class="men children">Pantalons</li>
+        <li class="men children women">T-shirt</li>
+        <li class="children">Pyjamas</li>
+        <li class="children">Chaussettes</li>
+        <li class="children">Manteaux</li>
+        <li class="children">Jeans</li>
+     </section>
+</section>
  </main>
 </body>
 <script src="index.js"></script>

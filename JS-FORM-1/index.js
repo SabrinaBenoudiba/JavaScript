@@ -1,12 +1,23 @@
-    // Affiche la pop-up automatiquement 
-window.onload = function() {
-  document.getElementById('popup').classList.add('active');  // La classe active est celle qu'on a créé dans le fichier css
-};
+// /****************************Menu Burger**********************************/
+// let menuBurger = document.querySelector (".menuBurger"),
+// basculant = document.querySelector (".basculant")
 
-// Ferme la pop-up au clic sur la croix
-document.getElementById('closeBtn').onclick = function() {
-  document.getElementById('popup').classList.remove('active');
-};
+// basculant.addEventListener("click", function(event) {
+//   menuBurger.classList.toggle("active")
+// });
+   
+   
+//    // Affiche la pop-up automatiquement 
+// window.onload = function() {
+//   document.getElementById('popup').classList.add('active');  // La classe active est celle qu'on a créé dans le fichier css
+// };
+
+// // Ferme la pop-up au clic sur la croix
+// document.getElementById('closeBtn').onclick = function() {
+//   document.getElementById('popup').classList.remove('active');
+// };
+
+
  
 // Exercice 9.a
 // let nom2 = document.getElementById('nom').value; // Permet de récupérer la valeur qui est dans le fichier html
@@ -70,8 +81,36 @@ document.getElementById('closeBtn').onclick = function() {
 
 // Exercice 10.4 - Filtrage par catégorie
 
+// function chooseCategorie(cloth, displayStyle) {
+//   var category = document.getElementsByClassName(cloth);
+//   for (var i = 0; i < category.length; i++) {
+//     category[i].style.display = displayStyle;
+//   }
+// }
+// document.getElementById('all').onclick = function() {
+//  chooseCategorie ('cloth', 'block');
+// };
+// document.getElementById('women').onclick = function() {
+//   chooseCategorie ('cloth', 'none'); // Cache tous les éléments ayant la classe 'cloth' en les rendant non visibles (display:none)
+//   chooseCategorie('women', 'block'); // Affiche tous les éléments ayant la classe 'women' en les rendant visibles (display:block)
+// };
+// document.getElementById('men').onclick = function() {
+//   chooseCategorie ('cloth', 'none'); 
+//   chooseCategorie ('men', 'block'); 
+// };
+// document.getElementById('children').onclick = function() {
+//   chooseCategorie ('cloth', 'none'); 
+//   chooseCategorie ('children', 'block');
+// };
 
 
-
-
-
+function filtrer(category){
+  let produits = document.querySelectorAll("#products li");
+  produits.forEach(produit => {
+    if(category === "all" || produit.classList.contains(category)){
+      produit.classList.remove("hide");
+    }else{
+      produit.classList.add("hide");
+    }
+  });
+}
