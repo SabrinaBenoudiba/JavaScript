@@ -34,13 +34,14 @@
 }
 
   /*-------------MENU BURGER-------------*/
-  .menuBurger{
-   /* display: none; */
-  }
+  /* .menuBurger{
+   display: none;
+  } */
 
-  .navLien ul{
+  /* .navLien ul{
 
-  }
+  } */
+
   nav{
     height: 50px;
 }
@@ -194,8 +195,8 @@ main{
     transform:scale(1.5);
 }
 
- /*--------------Anim JS---------------*/
-  /*---------------fade-in effect-----------------*/
+/*--------------Anim JS---------------*/
+/*---------------fade-in effect-----------------*/
 /* Animation fade-in */
 .fade-in {
   width: 500px;
@@ -293,6 +294,10 @@ main{
     
 }
 
-#products li.hide{
+#products article.hide{
     display: none;
+}
+
+.bouton{
+    display:row;
 }
